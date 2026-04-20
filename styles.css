@@ -11,7 +11,7 @@
 }
 */
 
-/* ===== GLOBAL (Base) Styles ===== */
+/* ===== Mobile Styles First ===== */
 body {
     font-family: Helvetica, Arial, sans-serif;
     margin: 0;
@@ -43,7 +43,7 @@ nav {
 
 nav ul {
     list-style: none;
-    margin: 0;
+    margin: .25rem;
     padding: 0;
 }
 
@@ -103,12 +103,6 @@ footer {
 }
 
 /* ===== Media Query (Medium) ===== */
-/* write a media query for a screen with at least 800px */
-/* change the body's grid template to 1fr 300px */
-/* target the header, nav, and footer and style their grid-column to 1/-1 */
-/* target the nav and display it flex, spaced around */
-/* target the .card-row to display flex */
-/* target the sections in .card-row with a width for 30% */
 
 @media screen and (min-width: 800px) {
     body {
@@ -117,12 +111,20 @@ footer {
     header, nav, footer {
         grid-column: 1/-1;
     }
-    nav {
+    nav ul {
         display: flex;
         justify-content: space-around;
     }
+    nav a { 
+        background-color: #1e293b;
+    }
+    nav a:hover {
+        color:#020617;
+        background-color:#e2e8f0;
+    }
     .card-row {
         display: flex;
+        gap: 1rem;
     }
     .card-row > section {
         width: 30%;
